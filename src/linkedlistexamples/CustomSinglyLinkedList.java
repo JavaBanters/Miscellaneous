@@ -11,8 +11,7 @@ public class CustomSinglyLinkedList {
     }
 
     public CustomSinglyLinkedList(int data) {
-        Node newNode = new Node(data);
-        newNode.next = null;
+        Node newNode = new Node(data); //Node newNode = new Node(1);
         if(head == null) {
             head = newNode;
             tail = head;
@@ -20,22 +19,33 @@ public class CustomSinglyLinkedList {
         this.size++;
     }
 
-    public void display() {
+    public void insertFirst(int data) {
+        Node newNode = new Node(data);
         if(head == null) {
-            System.out.println("The list is empty");
+            head = newNode;
+            tail = head;
         } else {
-            Node temp = head;
-            while(temp != null) { // i= 0
-                System.out.print(temp.data+" -> ");
-                temp = temp.next; //i++
-            }
-            System.out.print("null");
-            System.out.println();
+            newNode.next = head ;
+            head = newNode;
         }
+        this.size++;
+    }
 
-
+    public void insertLast(int data) {
 
     }
+
+    public void display() {
+        Node temp = head; //i = 0
+        while (temp != null ) { //i < length
+            System.out.print(temp.data + " ->");
+            temp = temp.next; // i++
+        }
+        System.out.print("null");
+        System.out.println();
+    }
+
+
 
 
 
