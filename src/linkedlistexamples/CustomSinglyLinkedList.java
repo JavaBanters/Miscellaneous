@@ -32,7 +32,48 @@ public class CustomSinglyLinkedList {
     }
 
     public void insertLast(int data) {
+        Node newNode = new Node(data);
+        if(tail == null) {
+            insertFirst(data);
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+            this.size++;
+        }
+    }
 
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("The list is empty . you cannot delete anything");
+        } else {
+                if(head.next == null) {
+                    head = null;
+                    tail = null;
+                } else {
+                    Node temp = head.next;
+                    head = temp;
+                }
+                this.size--;
+        }
+    }
+
+    public void deleteLast() {
+        if (tail == null) {
+            System.out.println("The list is empty . you cannot delete anything");
+        } else {
+            if(head == tail) {
+                head = null;
+                tail = null;
+            } else {
+                Node temp = head;
+                for (int i = 1; i < size - 1; i++) {
+                    temp = temp.next;
+                }
+                temp.next = null;
+                tail = temp;
+            }
+            this.size--;
+        }
     }
 
     public void display() {

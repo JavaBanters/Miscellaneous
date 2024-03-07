@@ -22,10 +22,16 @@ public class Main {
 //        System.out.println(list);
 
             CustomSinglyLinkedList list = new CustomSinglyLinkedList(1);
-            list.insertFirst(2);
-            list.insertFirst(3);
-            list.insertFirst(4);
+            list.insertLast(2);
+            list.insertLast(3);
+            list.insertLast(4);
+            list.insertLast(5);
             list.display();
+
+            list.deleteLast();
+            list.display();
+
+
 
 
 
