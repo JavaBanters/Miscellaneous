@@ -27,6 +27,7 @@ public class CustomSinglyLinkedList {
         } else {
             newNode.next = head ;
             head = newNode;
+            tail.next = head;
         }
         this.size++;
     }
@@ -76,10 +77,41 @@ public class CustomSinglyLinkedList {
         }
     }
 
+    public void deleteIndex(int index) {
+            if( index == 0) {
+                this.deleteFirst();
+            } else if (index == this.size - 1) {
+                this.deleteLast();
+            } else {
+                Node temp = head;
+                for ( int i = 0; i < index - 1 ; i++ ) {
+                    temp = temp.next;
+                }
+                temp.next = temp.next.next;
+            }
+            this.size--;
+     }
+
+
+     public void insertIndex(int index, int data) {
+        Node newNode = new Node(data);
+        if (index == 0) {
+            insertFirst(data);
+        } else if (index == this.size - 1) {
+            insertLast(data);
+        } else {
+
+        }
+     }
+
+
+
+
+
     public void display() {
         Node temp = head; //i = 0
         while (temp != null ) { //i < length
-            System.out.print(temp.data + " ->");
+            System.out.print(temp.data + " -> ");
             temp = temp.next; // i++
         }
         System.out.print("null");

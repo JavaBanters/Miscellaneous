@@ -27,8 +27,7 @@ public class Main {
             list.insertLast(4);
             list.insertLast(5);
             list.display();
-
-            list.deleteLast();
+            list.deleteIndex(4);
             list.display();
 
 
