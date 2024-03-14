@@ -1,6 +1,8 @@
-package linkedlistexamples;
+package linkedlistexamples.singlylinkedlist;
 
 public class CustomSinglyLinkedList {
+
+
 
     Node head;
     Node tail;
@@ -27,7 +29,6 @@ public class CustomSinglyLinkedList {
         } else {
             newNode.next = head ;
             head = newNode;
-            tail.next = head;
         }
         this.size++;
     }
@@ -94,7 +95,7 @@ public class CustomSinglyLinkedList {
 
 
      public void insertIndex(int index, int data) {
-        Node newNode = new Node(data);
+
         if (index == 0) {
             insertFirst(data);
         } else if (index == this.size - 1) {
@@ -102,11 +103,8 @@ public class CustomSinglyLinkedList {
         } else {
 
         }
+
      }
-
-
-
-
 
     public void display() {
         Node temp = head; //i = 0

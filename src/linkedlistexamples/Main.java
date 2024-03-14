@@ -1,7 +1,9 @@
 package linkedlistexamples;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+
+import linkedlistexamples.doublylinkedlist.DoublyLinkedList;
+import linkedlistexamples.doublylinkedlist.Node;
+import linkedlistexamples.singlylinkedlist.CustomSinglyLinkedList;
 
 public class Main {
 
@@ -21,14 +23,24 @@ public class Main {
 //        list.add(1, 6);
 //        System.out.println(list);
 
-            CustomSinglyLinkedList list = new CustomSinglyLinkedList(1);
-            list.insertLast(2);
-            list.insertLast(3);
-            list.insertLast(4);
-            list.insertLast(5);
-            list.display();
-            list.deleteIndex(4);
-            list.display();
+//            CustomSinglyLinkedList list = new CustomSinglyLinkedList(1);
+//            list.insertLast(2);
+//            list.insertLast(3);
+//            list.insertLast(4);
+//            list.insertLast(5);
+//            list.display();
+//            list.insertIndex(0,6);
+//            list.display();
+
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.addFirst(4);
+        list.addFirst(3);
+        list.addFirst(2);
+        list.addFirst(1);
+        list.display();
+
+
+
 
 
 
