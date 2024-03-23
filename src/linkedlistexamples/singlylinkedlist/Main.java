@@ -1,4 +1,4 @@
-package linkedlistexamples;
+package linkedlistexamples.singlylinkedlist;
 
 
 import linkedlistexamples.doublylinkedlist.DoublyLinkedList;
