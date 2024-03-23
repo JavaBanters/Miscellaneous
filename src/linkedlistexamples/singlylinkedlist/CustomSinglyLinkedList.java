@@ -4,7 +4,7 @@ public class CustomSinglyLinkedList {
 
 
 
-    Node head;
+    public Node head;
     Node tail;
     int size;
 
@@ -114,6 +114,34 @@ public class CustomSinglyLinkedList {
         }
         System.out.print("null");
         System.out.println();
+    }
+
+    public Node findMidNode(Node head) {
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        return slow;
+    }
+
+    public boolean detectLoop(Node head) {
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 
