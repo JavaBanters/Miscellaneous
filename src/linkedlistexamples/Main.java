@@ -35,12 +35,7 @@ public class Main {
             //list.insertIndex(0,6);
             //list.display();
 
-//        DoublyLinkedList list = new DoublyLinkedList();
-//        list.addFirst(4);
-//        list.addFirst(3);
-//        list.addFirst(2);
-//        list.addFirst(1);
-//        list.display();
+
 
 
         Node first = new Node(5);
