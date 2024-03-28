@@ -5,6 +5,8 @@ import linkedlistexamples.doublylinkedlist.DoublyLinkedList;
 import linkedlistexamples.singlylinkedlist.Node;
 import linkedlistexamples.singlylinkedlist.CustomSinglyLinkedList;
 
+import java.util.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -53,7 +55,8 @@ public class Main {
         System.out.println(list.detectLoop(first));
 
 
-
+        LinkedList <Integer> list1 = new LinkedList<>();
+        list1.addFirst(1);
 
 
 

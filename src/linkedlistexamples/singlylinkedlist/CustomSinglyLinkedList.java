@@ -2,8 +2,6 @@ package linkedlistexamples.singlylinkedlist;
 
 public class CustomSinglyLinkedList {
 
-
-
     public Node head;
     Node tail;
     int size;

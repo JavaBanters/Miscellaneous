@@ -1,3 +1,5 @@
+package recursion;
+
 public class RecursionExample {
 
     public static void main(String[] args) {
@@ -5,11 +7,10 @@ public class RecursionExample {
     }
 
     private static void display(int n) {
-        if(n == 0) {
-            return;
-        }
+        if (n == 0) return; // base condition
+        System.out.println("The current number is" +n);
         display(n-1);
-        System.out.println("Hello I am from display");
+        System.out.println("end of :" +n);
     }
 
     
