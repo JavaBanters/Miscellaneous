@@ -3,14 +3,13 @@ package recursion;
 public class RecursionExample {
 
     public static void main(String[] args) {
-        display(5);
+        display(1);
     }
 
-    private static void display(int n) {
-        if (n == 0) return; // base condition
-        System.out.println("The current number is" +n);
-        display(n-1);
-        System.out.println("end of :" +n);
+    public static void display(int n) {
+        if (n == 6) return; // base condition
+        System.out.println(n);
+        display(n+1);
     }
 
     
